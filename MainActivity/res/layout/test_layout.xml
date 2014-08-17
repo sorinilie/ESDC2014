@@ -1,0 +1,128 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/test_lay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/backgr"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background" />
+
+    <LinearLayout
+        style="@style/LoginFormContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingStart="0dip" >
+
+        <LinearLayout
+            style="@style/LoginFormContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dip"
+            android:orientation="horizontal"
+            android:paddingStart="0dip" >
+
+            <SeekBar
+                android:id="@+id/redSeekbar"
+                android:layout_width="220dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"          
+                android:max="255" />
+
+            <TextView
+                android:id="@+id/progress_display_red"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="@string/progress_display_red" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            style="@style/LoginFormContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dip"
+            android:orientation="horizontal"
+            android:paddingStart="0dip" >
+
+            <SeekBar
+                android:id="@+id/greenSeekbar"
+                android:layout_width="220dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="255" />
+
+            <TextView
+                android:id="@+id/progress_display_green"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="@string/progress_display_green" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/LoginFormContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dip"
+            android:orientation="horizontal"
+            android:paddingStart="0dip" >
+
+            <SeekBar
+                android:id="@+id/blueSeekbar"
+                android:layout_width="220dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="255" />
+
+            <TextView
+                android:id="@+id/progress_display_blue"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:text="@string/progress_display_blue" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/LoginFormContainer"
+            android:layout_marginTop="0dip"
+            android:orientation="horizontal"
+            android:paddingStart="0dip" >
+
+            <ToggleButton
+                android:id="@+id/toggleButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="ToggleButton"
+                android:onClick="toggleStatus"
+                android:textOff="SmartPlug is off"
+                android:textOn="SmartPlug is on" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/LoginFormContainer"
+            android:layout_marginTop="0dip"
+            android:orientation="horizontal"
+            android:paddingStart="0dip" >
+
+            <Button
+                android:id="@+id/opnDoor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="doorOpn"
+                android:text="Open Door" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
